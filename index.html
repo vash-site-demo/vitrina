@@ -151,12 +151,22 @@ footer{padding:26px 0 40px;color:var(--ink-3);font-size:14px;display:flex;flex-w
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
 body{overflow-x:clip}
-.top{background:var(--paper);border-bottom-color:var(--line)}
-.top .wrap{gap:10px}
-.top .btn{min-height:46px;font-size:15px}
+.top{background:#0b0f19;border-bottom-color:#263247;color:#fff;box-shadow:0 5px 20px #0b0f1920;backdrop-filter:none}
+.top.scrolled{border-color:#263247}
+.top .wrap{height:84px;gap:12px}
+.top .brand{gap:12px;flex:none;color:#fff}
+.brand img{width:64px;height:auto;display:block}
+.brand strong{display:block;font:700 22px/1 var(--display);white-space:nowrap}
+.brand small{display:block;margin-top:5px;color:#bac8de;font:500 13px/1.2 var(--body)}
+.top .top-cta{min-height:56px;padding:0 25px;gap:12px;justify-content:center;background:#64e3fa;color:#08121f;font-size:17px;font-weight:800;white-space:nowrap;box-shadow:0 6px 20px #00d9f546}
+.top .top-cta:hover{background:#98edfc}
+.top-cta-arrow{font-size:18px}
+.top :focus-visible{outline-color:#64e3fa}
 .nav-links{display:flex;gap:8px}
 .nav-links a,.mobile-nav a,.mobile-nav summary{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink);text-decoration:none;font-size:16px;font-weight:700}
 .nav-links a:hover,.mobile-nav a:hover,.mobile-nav summary:hover{border-color:var(--accent);color:var(--accent)}
+.top .nav-links a,.top .mobile-nav summary{background:#172235;color:#f4f8ff;border-color:#354661}
+.top .nav-links a:hover,.top .mobile-nav summary:hover{border-color:#64e3fa;color:#64e3fa}
 .mobile-nav{display:none;position:relative}
 .mobile-nav summary{list-style:none;cursor:pointer;padding:0 12px}
 .mobile-nav summary::-webkit-details-marker{display:none}
@@ -168,7 +178,7 @@ body{overflow-x:clip}
 .final a:focus-visible{outline-color:#fff}
 .project-float{position:fixed;inset:auto max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) auto;z-index:9;justify-content:center;border:1px solid rgba(255,255,255,.65);box-shadow:0 8px 28px #17274255}
 .has-project-float footer{padding-bottom:calc(94px + env(safe-area-inset-bottom))}
-section[id]{scroll-margin-top:80px}
+section[id]{scroll-margin-top:100px}
 .hello img{width:58px;height:58px}
 .region{color:var(--ink-2);font-size:15px;margin:12px 0 0}
 .case-text .meta,.browser .bar span{color:var(--ink-2)}
@@ -176,26 +186,46 @@ section[id]{scroll-margin-top:80px}
 .contact-number a{text-decoration:none}
 .contact-number a:hover{text-decoration:underline}
 [hidden]{display:none!important}
-@media(max-width:680px){
+@media(max-width:820px){
   .nav-links{display:none}
   .mobile-nav{display:block;margin-left:auto}
-  .brand{font-size:11px;gap:6px}
-  .brand i{flex:none;width:25px;height:25px;font-size:10px}
-  .top .btn{padding:8px 11px}
+}
+@media(max-width:680px){
+  .top .wrap{height:72px;gap:8px}
+  .top .brand{gap:6px}
+  .brand img{width:40px}
+  .brand strong{font-size:17px}
+  .brand small,.top-cta-arrow{display:none}
+  .top .top-cta{min-height:49px;padding:0 13px;font-size:14px}
+  section[id]{scroll-margin-top:88px}
   .project-float{padding:14px 18px}
   .hero{gap:22px;padding-top:32px}
   .fan{height:360px}
   .fan .phone:nth-child(1){--pw:154px}
   .fan .phone:nth-child(2),.fan .phone:nth-child(3){--pw:128px}
 }
+@media(max-width:480px){
+  .mobile-nav summary{width:44px;padding:0}
+  .mobile-nav summary span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .mobile-nav summary::before{content:'';width:17px;height:13px;border-block:2px solid currentColor;background:linear-gradient(currentColor,currentColor) center / 100% 2px no-repeat}
+}
+@media(max-width:380px){
+  .top .wrap{padding-inline:12px;gap:6px}
+  .brand img{width:34px}
+  .brand strong{font-size:16px}
+  .top .top-cta{padding-inline:12px}
+}
+@media(max-width:359px){
+  .brand img{display:none}
+}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="#"><i id="brandInit"></i><span id="brandName"></span></a>
+  <a class="brand" href="#"><img src="assets/asg-code-mark.svg" alt="" width="64" height="20"><span><strong>ASG CODE</strong><small>Веб-студия</small></span></a>
   <nav class="nav-links" aria-label="Разделы"><a href="#works">Работы</a><a href="#services">Цены</a><a href="#how">Этапы</a></nav>
-  <details class="mobile-nav"><summary>Меню</summary><nav aria-label="Разделы"><a href="#works">Работы</a><a href="#services">Цены</a><a href="#how">Этапы</a></nav></details>
-  <a class="btn btn-main" href="#write">Связаться</a>
+  <details class="mobile-nav"><summary><span>Меню</span></summary><nav aria-label="Разделы"><a href="#works">Работы</a><a href="#services">Цены</a><a href="#how">Этапы</a></nav></details>
+  <a class="btn btn-main top-cta" href="#write">Обсудить проект<span class="top-cta-arrow" aria-hidden="true">↗</span></a>
 </div></header>
 
 <main class="wrap">
@@ -256,7 +286,6 @@ section[id]{scroll-margin-top:80px}
   const init = (D.name || '?').split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase();
   const ava = D.photo ? `<img src="${esc(D.photo)}" alt="">` : `<b>${esc(init)}</b>`;
 
-  $('brandInit').textContent = init; $('brandName').textContent = D.name;
   $('hello').innerHTML = `${ava}<span>Привет, я ${esc(first)}</span>`;
   $('h1').innerHTML = D.h1 || `Сайты для малого бизнеса${D.city ? ` в <em>${esc(D.cityIn || D.city)}</em>` : ''}`;
   $('lead').textContent = D.lead || 'Соберу готовое демо вашего сайта до разговора – вы смотрите результат, а потом решаете.';
@@ -315,6 +344,11 @@ section[id]{scroll-margin-top:80px}
   document.querySelectorAll('[data-cta]').forEach((el) => { el.innerHTML = ctaHtml; });
   document.querySelector('.hero [data-cta]').insertAdjacentHTML('beforeend', '<a class="btn btn-ghost" href="#works">Посмотреть работы</a>');
   if (botUrl) {
+    const headerLink = document.querySelector('.top-cta');
+    headerLink.href = botUrl;
+    headerLink.target = '_blank';
+    headerLink.rel = 'noopener';
+    headerLink.title = 'Открыть консультанта в Telegram';
     const projectLink = document.createElement('a');
     projectLink.className = 'btn btn-main project-float';
     projectLink.href = botUrl;
