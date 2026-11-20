@@ -153,15 +153,21 @@ footer{padding:26px 0 40px;color:var(--ink-3);font-size:14px;display:flex;flex-w
 body{overflow-x:clip}
 .top{background:var(--paper);border-bottom-color:var(--line)}
 .top .wrap{gap:10px}
-.top .btn{min-height:44px}
-.nav-links{display:flex;gap:20px}
-.nav-links a,.mobile-nav a{text-decoration:none;font-size:15px}
-.nav-links a:hover,.mobile-nav a:hover{text-decoration:underline}
+.top .btn{min-height:46px;font-size:15px}
+.nav-links{display:flex;gap:8px}
+.nav-links a,.mobile-nav a,.mobile-nav summary{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink);text-decoration:none;font-size:16px;font-weight:700}
+.nav-links a:hover,.mobile-nav a:hover,.mobile-nav summary:hover{border-color:var(--accent);color:var(--accent)}
 .mobile-nav{display:none;position:relative}
-.mobile-nav summary{list-style:none;min-height:44px;display:grid;place-items:center;cursor:pointer;font-weight:600;font-size:14px;padding:0 8px}
+.mobile-nav summary{list-style:none;cursor:pointer;padding:0 12px}
 .mobile-nav summary::-webkit-details-marker{display:none}
-.mobile-nav nav{position:absolute;right:0;top:100%;display:grid;min-width:150px;padding:8px;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px #14151a16}
-.mobile-nav a{display:block;padding:10px}
+.mobile-nav nav{position:absolute;right:0;top:calc(100% + 8px);display:grid;gap:6px;min-width:160px;padding:8px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px #14151a26}
+.mobile-nav a{justify-content:flex-start}
+.cta .btn{min-height:48px}
+.cta .btn-bot,.project-float{min-height:52px;font-size:16px;font-weight:700}
+.final .btn-ghost{border:1px solid rgba(255,255,255,.28)}
+.final a:focus-visible{outline-color:#fff}
+.project-float{position:fixed;inset:auto max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) auto;z-index:9;justify-content:center;border:1px solid rgba(255,255,255,.65);box-shadow:0 8px 28px #17274255}
+.has-project-float footer{padding-bottom:calc(94px + env(safe-area-inset-bottom))}
 section[id]{scroll-margin-top:80px}
 .hello img{width:58px;height:58px}
 .region{color:var(--ink-2);font-size:15px;margin:12px 0 0}
@@ -176,6 +182,7 @@ section[id]{scroll-margin-top:80px}
   .brand{font-size:11px;gap:6px}
   .brand i{flex:none;width:25px;height:25px;font-size:10px}
   .top .btn{padding:8px 11px}
+  .project-float{padding:14px 18px}
   .hero{gap:22px;padding-top:32px}
   .fan{height:360px}
   .fan .phone:nth-child(1){--pw:154px}
@@ -288,7 +295,8 @@ section[id]{scroll-margin-top:80px}
   if (M.whatsapp) links.push({ k: 'whatsapp', label: 'WhatsApp', href: `https://wa.me/${String(M.whatsapp).replace(/\D/g, '')}?text=${enc}` });
   if (M.max) links.push({ k: 'max', label: 'MAX', href: M.max, copy: true });
   // бот-продавец: работы, цены и бриф круглые сутки (скилл «Бот-продавец»)
-  if (M.bot) links.push({ k: 'telegram', label: 'Обсудить свой сайт', href: M.bot.startsWith('http') ? M.bot : `https://t.me/${M.bot.replace(/^@/, '')}` });
+  const botUrl = M.bot && (M.bot.startsWith('http') ? M.bot : 'https://t.me/' + M.bot.replace(/^@/, ''));
+  if (botUrl) links.unshift({ k: 'telegram', label: 'Обсудить свой сайт', href: botUrl, bot: true });
   $('contactHint').textContent = canMessage
     ? 'Выберите мессенджер, чтобы отправить готовое сообщение.'
     : M.bot
@@ -303,9 +311,19 @@ section[id]{scroll-margin-top:80px}
     contact.append(number);
     contact.hidden = false;
   }
-  const ctaHtml = links.map((l, i) => `<a class="btn ${i === 0 ? 'btn-main' : 'btn-ghost'}" href="${esc(l.href)}" ${l.local ? '' : 'target="_blank" rel="noopener"'} ${l.copy ? 'data-copy' : ''}>${ico[l.k] || ''}${l.label}</a>`).join('') || '<span>Добавьте мессенджер: «добавь в витрину Telegram …»</span>';
+  const ctaHtml = links.map((l, i) => `<a class="btn ${i === 0 ? 'btn-main' : 'btn-ghost'}${l.bot ? ' btn-bot' : ''}" href="${esc(l.href)}" ${l.local ? '' : 'target="_blank" rel="noopener"'} ${l.copy ? 'data-copy' : ''}>${ico[l.k] || ''}${l.label}</a>`).join('') || '<span>Добавьте мессенджер: «добавь в витрину Telegram …»</span>';
   document.querySelectorAll('[data-cta]').forEach((el) => { el.innerHTML = ctaHtml; });
   document.querySelector('.hero [data-cta]').insertAdjacentHTML('beforeend', '<a class="btn btn-ghost" href="#works">Посмотреть работы</a>');
+  if (botUrl) {
+    const projectLink = document.createElement('a');
+    projectLink.className = 'btn btn-main project-float';
+    projectLink.href = botUrl;
+    projectLink.target = '_blank';
+    projectLink.rel = 'noopener';
+    projectLink.innerHTML = ico.telegram + '<span>Обсудить проект</span>';
+    document.body.classList.add('has-project-float');
+    document.body.append(projectLink);
+  }
   const toast = (t) => { const el = $('toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 3200); };
   document.addEventListener('click', (e) => {
     const a = e.target.closest('[data-copy]'); if (!a) return;
