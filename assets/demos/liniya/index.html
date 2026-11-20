@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Демонстрационный лендинг стоматологии: лечение с понятным бюджетом, три сценария и рассрочка без процентов.">
+  <meta name="theme-color" content="#103b63">
+  <title>Стоматология «Линия» — лечение с понятным бюджетом</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23103b63'/%3E%3Cpath d='M20 16c-7 7-3 20 3 32 3 6 7 4 8-4 1-7 3-7 4 0 1 8 5 10 8 4 6-12 10-25 3-32-5-5-10-2-14-2s-8-3-12 2Z' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preload" href="./assets/manrope-cyr-Dvxsihut.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/hero-original-C3tES9DA.jpg" as="image">
+  <script defer src="./vendor/lucide.min.js"></script>
+  <script type="module" crossorigin src="./assets/index-COXp7SAE.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bba2jISq.css">
+</head>
+<body>
+  <a class="skip-link" href="#services">Перейти к услугам</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Стоматология Линия — наверх">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="plus"></i></span>
+        <span><strong>ЛИНИЯ</strong><small>стоматология · демо</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#scenarios">План и бюджет</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#about">О клинике</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="button button-small header-action" href="#booking">Записаться на приём</a>
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" aria-hidden="true"></i></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация" hidden>
+      <a href="#services">Услуги</a>
+      <a href="#scenarios">План и бюджет</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#about">О клинике</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#booking">Записаться на приём</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="demo-label hero-enter">Стоматология для всей семьи</p>
+          <h1 id="hero-title">
+            <span class="hero-title-line hero-enter">Лечение зубов с понятным бюджетом:</span>
+            <span class="hero-title-line hero-title-accent hero-enter">три сценария и рассрочка без процентов</span>
+          </h1>
+          <p class="hero-lead hero-enter">После диагностики вы увидите варианты лечения, стоимость каждого этапа и сможете выбрать, с чего начать.</p>
+          <div class="hero-actions hero-enter">
+            <a class="button button-hero" href="#booking">Записаться на консультацию <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            <button class="discount-link" type="button" data-open-discount aria-haspopup="dialog"><i data-lucide="badge-percent" aria-hidden="true"></i><span><strong>Скидка 10 %</strong> на первичный приём</span></button>
+          </div>
+          <p class="action-note hero-enter">После нажатия откроется форма демо-записи. Условия акции и рассрочки для реальной клиники нужно подтвердить.</p>
+        </div>
+        <div class="hero-media hero-enter">
+          <img class="hero-photo" src="./assets/hero-original-C3tES9DA.jpg" alt="Пациентка с короткой стрижкой улыбается и смотрит в камеру" width="2048" height="1152">
+          <span>AI-изображение для демо</span>
+        </div>
+        <aside class="quick-card hero-enter" aria-labelledby="quick-title">
+          <div class="quick-intro"><p class="quick-overline">Первый шаг</p><h2 id="quick-title">Консультация</h2><p>Опишите, что беспокоит. Врач проведёт осмотр и предложит доступные варианты лечения.</p></div>
+          <form id="quick-form" novalidate>
+            <label class="quick-field"><span>Ваше имя</span><input id="quick-name" type="text" autocomplete="name" maxlength="60" placeholder="Как к вам обращаться" required></label>
+            <label class="quick-field"><span>Телефон</span><input id="quick-phone" type="tel" autocomplete="tel" maxlength="24" placeholder="+7 900 000-00-00" required></label>
+            <label class="quick-consent"><input type="checkbox" id="quick-consent"><span>Согласен на локальное сохранение демо-заявки</span></label>
+            <p class="quick-error" id="quick-error" role="alert" hidden></p>
+            <button class="button button-hero button-wide" type="submit">Сохранить демо-заявку</button>
+          </form>
+          <div class="quick-success" id="quick-success" hidden><i data-lucide="circle-check" aria-hidden="true"></i><strong>Демо-заявка сохранена</strong><p>Данные есть только в этом браузере, администратор их не получил.</p><button class="quick-edit" id="quick-edit" type="button">Изменить данные</button></div>
+          <small>Демонстрационная форма — без отправки в клинику</small>
+        </aside>
+      </div>
+      <div class="container hero-bottom" aria-label="Основные этапы"><span><i data-lucide="scan-line" aria-hidden="true"></i>Диагностика</span><span><i data-lucide="list-checks" aria-hidden="true"></i>Три сценария</span><span><i data-lucide="badge-russian-ruble" aria-hidden="true"></i>Понятная смета</span><span><i data-lucide="calendar-check" aria-hidden="true"></i>Лечение по плану</span></div>
+    </section>
+
+    <section class="section smile-section" id="smile" aria-labelledby="smile-title">
+      <div class="container smile-grid">
+        <div class="smile-compare" id="smile-compare" style="--position:50%">
+          <img class="smile-after" src="./assets/smile-comparison-CEuYuHNl.jpg" alt="Улыбка для демонстрации интерфейса сравнения" width="1536" height="1024">
+          <img class="smile-before" src="./assets/smile-comparison-CEuYuHNl.jpg" alt="" width="1536" height="1024" aria-hidden="true">
+          <span class="smile-label smile-label-before">До</span><span class="smile-label smile-label-after">После</span>
+          <span class="smile-divider" aria-hidden="true"><i data-lucide="chevrons-left-right"></i></span>
+          <input id="smile-range" type="range" min="10" max="90" value="50" aria-label="Передвинуть границу сравнения улыбки">
+        </div>
+        <div class="smile-copy"><p class="section-kicker">Эстетическая стоматология</p><h2 id="smile-title">Улыбка, которую хочется показывать</h2><p>Передвиньте ползунок и посмотрите, как на сайте может работать сравнение оттенка зубов. Реальные возможности отбеливания врач определяет после осмотра.</p><button class="button button-primary" type="button" data-service="Эстетическая стоматология">Обсудить улыбку <i data-lucide="arrow-right" aria-hidden="true"></i></button><small>Визуальный эффект для макета, а не фотография результата лечения.</small></div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">Стоматология в Екатеринбурге · демо</p><h2 id="services-title">Популярные услуги</h2></div>
+          <p>Выберите направление — форма ниже подставит его автоматически. Объём лечения врач определяет после диагностики.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card"><span class="service-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span><h3>Профессиональная гигиена</h3><p>Удаление налёта и камня, полировка и рекомендации по домашнему уходу.</p><div class="service-bottom"><span>от 6 500 ₽*</span><button class="service-link" type="button" data-service="Профессиональная гигиена" aria-label="Выбрать профессиональную гигиену"><i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></article>
+          <article class="service-card"><span class="service-icon"><i data-lucide="shield-plus" aria-hidden="true"></i></span><h3>Лечение зубов</h3><p>Диагностика и лечение кариеса с понятным планом восстановления зуба.</p><div class="service-bottom"><span>от 7 500 ₽*</span><button class="service-link" type="button" data-service="Лечение зубов" aria-label="Выбрать лечение зубов"><i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></article>
+          <article class="service-card"><span class="service-icon"><i data-lucide="scan" aria-hidden="true"></i></span><h3>Имплантация</h3><p>Оценка костной ткани, обсуждение этапов и восстановление отсутствующего зуба.</p><div class="service-bottom"><span>от 45 000 ₽*</span><button class="service-link" type="button" data-service="Имплантация" aria-label="Выбрать имплантацию"><i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></article>
+          <article class="service-card"><span class="service-icon"><i data-lucide="smile" aria-hidden="true"></i></span><h3>Детский приём</h3><p>Знакомство с кабинетом, профилактический осмотр и лечение по показаниям.</p><div class="service-bottom"><span>Стоимость после осмотра</span><button class="service-link" type="button" data-service="Детский приём" aria-label="Выбрать детский приём"><i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></article>
+          <article class="service-card"><span class="service-icon"><i data-lucide="braces" aria-hidden="true"></i></span><h3>Ортодонтия</h3><p>Консультация по прикусу, брекетам и элайнерам после необходимой диагностики.</p><div class="service-bottom"><span>от 2 000 ₽*</span><button class="service-link" type="button" data-service="Ортодонтия" aria-label="Выбрать ортодонтию"><i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></article>
+          <article class="service-card"><span class="service-icon"><i data-lucide="gem" aria-hidden="true"></i></span><h3>Эстетическая стоматология</h3><p>Отбеливание и реставрация с учётом исходного состояния зубов и дёсен.</p><div class="service-bottom"><span>Стоимость после осмотра</span><button class="service-link" type="button" data-service="Эстетическая стоматология" aria-label="Выбрать эстетическую стоматологию"><i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div></article>
+        </div>
+        <p class="section-footnote">* Цены приведены для демонстрации макета и не являются прайсом действующей клиники.</p>
+      </div>
+    </section>
+
+    <section class="section scenarios-section" id="scenarios" aria-labelledby="scenarios-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-kicker">Наш подход к бюджету</p><h2 id="scenarios-title">Три сценария лечения.<br>Вы выбираете темп.</h2></div>
+          <p>После осмотра врач показывает, что требует внимания сейчас, а что можно распределить по этапам. Это интерактивный пример, а не медицинский план.</p>
+        </div>
+        <div class="scenario-shell">
+          <div class="scenario-tabs" role="tablist" aria-label="Примеры сценариев лечения">
+            <button class="scenario-tab" id="scenario-tab-priority" type="button" role="tab" aria-selected="true" aria-controls="scenario-panel" tabindex="0" data-scenario="priority"><span>01</span><strong>Сначала главное</strong><small>Что нельзя откладывать</small></button>
+            <button class="scenario-tab" id="scenario-tab-stages" type="button" role="tab" aria-selected="false" aria-controls="scenario-panel" tabindex="-1" data-scenario="stages"><span>02</span><strong>По этапам</strong><small>Распределить расходы</small></button>
+            <button class="scenario-tab" id="scenario-tab-complete" type="button" role="tab" aria-selected="false" aria-controls="scenario-panel" tabindex="-1" data-scenario="complete"><span>03</span><strong>Полный план</strong><small>Увидеть весь бюджет</small></button>
+          </div>
+          <div class="scenario-panel" id="scenario-panel" role="tabpanel" aria-labelledby="scenario-tab-priority" tabindex="0">
+            <div class="scenario-panel-copy"><p class="scenario-overline" id="scenario-overline">Сценарий 01 · первый этап</p><h3 id="scenario-title">Сначала устранить причину беспокойства</h3><p id="scenario-description">Врач определяет приоритетную зону и отделяет срочное лечение от процедур, которые можно запланировать позже.</p></div>
+            <div class="scenario-features-wrap"><span class="scenario-label">Что покажет план</span><ul class="scenario-features" id="scenario-features"><li><i data-lucide="check" aria-hidden="true"></i>Приоритетная зона и диагностика</li><li><i data-lucide="check" aria-hidden="true"></i>Необходимые процедуры первого этапа</li><li><i data-lucide="check" aria-hidden="true"></i>Что можно перенести без ущерба по показаниям</li></ul></div>
+            <div class="scenario-total"><span>Демо-ориентир этапа</span><strong id="scenario-price">12 000 ₽</strong><small>Не прайс и не медицинская рекомендация</small></div>
+          </div>
+        </div>
+        <div class="installment-note"><i data-lucide="badge-percent" aria-hidden="true"></i><div><strong>Рассрочка без процентов — с условиями до оформления</strong><p>Срок, первый взнос, партнёр и ограничения должны быть подтверждены клиникой и видны пациенту заранее.</p></div><a class="text-link" href="#booking">Обсудить лечение <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+
+    <section class="section equipment-section" id="equipment" aria-labelledby="equipment-title">
+      <div class="container equipment-grid">
+        <div class="equipment-copy"><p class="section-kicker">Технологии и забота</p><h2 id="equipment-title">Современное оборудование для точной диагностики</h2><p>Покажите пациенту не просто красивый кабинет, а как техника помогает врачу увидеть проблему, объяснить лечение и спланировать этапы.</p><ul><li><i data-lucide="monitor-check" aria-hidden="true"></i><span><strong>Наглядная диагностика</strong>Снимки и результаты осмотра доступны для обсуждения.</span></li><li><i data-lucide="scan-line" aria-hidden="true"></i><span><strong>Точный план</strong>Объём исследований определяется показаниями.</span></li></ul><small>Сгенерированное изображение для макета, не кабинет действующей клиники.</small></div>
+        <div class="equipment-photo"><img src="./assets/equipment-modern-4Nokl9BG.jpg" alt="Современный стоматологический кабинет с цифровым оборудованием" width="1536" height="1024" loading="lazy"><span><i data-lucide="scan-line" aria-hidden="true"></i>Техника на стороне точного плана</span></div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-photo"><img src="./assets/clinic-BKQXlRrm.jpg" alt="Светлый стоматологический кабинет — иллюстрация для макета" width="1600" height="1067" loading="lazy"><span>Фото для макета · Pexels</span></div>
+        <div class="about-copy"><p class="section-kicker">О клинике</p><h2 id="about-title">Спокойное лечение начинается с ясного процесса</h2><p>В макете показано, как клиника может объяснить пациенту каждый этап — от диагностики до согласования стоимости.</p><a class="text-link" href="#booking">Записаться на консультацию <i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+      </div>
+      <div class="container advantages-grid">
+        <article><i data-lucide="shield-check" aria-hidden="true"></i><h3>Стерильность</h3><p>Для рабочей версии — понятное описание обработки инструментов и контроля.</p></article>
+        <article><i data-lucide="package-check" aria-hidden="true"></i><h3>Материалы</h3><p>Что используется в лечении и как выбор материала влияет на смету.</p></article>
+        <article><i data-lucide="message-circle-question" aria-hidden="true"></i><h3>Понятные объяснения</h3><p>Показываем проблемную зону и обсуждаем варианты без сложных терминов.</p></article>
+        <article><i data-lucide="list-checks" aria-hidden="true"></i><h3>План до лечения</h3><p>Этапы, стоимость и изменения плана согласовываются до начала процедур.</p></article>
+        <article><i data-lucide="armchair" aria-hidden="true"></i><h3>Комфорт</h3><p>Можно обсудить темп приёма, перерывы и доступные способы обезболивания.</p></article>
+        <article><i data-lucide="monitor-check" aria-hidden="true"></i><h3>Диагностика</h3><p>Исследования назначаются по показаниям, а не по обязательному списку.</p></article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" aria-labelledby="gallery-title">
+      <div class="container"><div class="section-heading"><div><p class="section-kicker">Атмосфера клиники</p><h2 id="gallery-title">Покажите место,<br>куда придёт пациент</h2></div><p>В демо используются стоковые иллюстрации. На сайте настоящей клиники здесь должны быть её кабинеты и оборудование.</p></div>
+        <div class="gallery-grid"><figure><img src="./assets/clinic-BKQXlRrm.jpg" alt="Иллюстрация светлого кабинета клиники" width="1600" height="1067" loading="lazy"><figcaption>Кабинет · изображение для макета</figcaption></figure><figure><img src="./assets/diagnostics-Dwhhie8S.jpg" alt="Иллюстрация обсуждения снимка с врачом" width="1400" height="933" loading="lazy"><figcaption>Обсуждение диагностики · изображение для макета</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section doctors-section" id="doctors" aria-labelledby="doctors-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">Команда</p><h2 id="doctors-title">Познакомьтесь с врачами до записи</h2></div><p>Для реального сайта здесь будут имена, специализации, стаж, фотографии и документы специалистов. Сейчас показана только структура блока.</p></div>
+        <div class="doctors-grid">
+          <article class="doctor-card"><span><i data-lucide="stethoscope" aria-hidden="true"></i></span><p>Направление</p><h3>Терапевтическая стоматология</h3><small>Карточка врача — для данных клиники</small></article>
+          <article class="doctor-card"><span><i data-lucide="scan" aria-hidden="true"></i></span><p>Направление</p><h3>Хирургия и имплантация</h3><small>Карточка врача — для данных клиники</small></article>
+          <article class="doctor-card"><span><i data-lucide="braces" aria-hidden="true"></i></span><p>Направление</p><h3>Ортодонтия</h3><small>Карточка врача — для данных клиники</small></article>
+        </div>
+        <div class="reviews-placeholder"><i data-lucide="messages-square" aria-hidden="true"></i><div><h3>Отзывы пациентов</h3><p>В рабочей версии — только настоящие отзывы со ссылкой на источник. Мы не заменяем их выдуманными цитатами.</p></div><span>Место для подтверждённых отзывов</span></div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid"><div><p class="section-kicker">Перед записью</p><h2 id="faq-title">Частые вопросы</h2><p class="faq-intro">Свою ситуацию можно описать в комментарии к демо-заявке.</p></div>
+        <div class="faq-list">
+          <details><summary>Всегда ли доступны три сценария?<i data-lucide="plus" aria-hidden="true"></i></summary><p>Набор вариантов зависит от диагностики и показаний. Если клинически допустимых сценариев меньше, врач объясняет доступный план и его стоимость.</p></details>
+          <details><summary>Как работает рассрочка без процентов?<i data-lucide="plus" aria-hidden="true"></i></summary><p>В макете условия демонстрационные. Для реального сайта нужно указать срок, первый взнос, партнёра, отсутствие комиссии и переплаты, а также ограничения.</p></details>
+          <details><summary>Можно ли сначала только узнать стоимость?<i data-lucide="plus" aria-hidden="true"></i></summary><p>Сценарий макета предполагает, что после осмотра пациент получает план и смету. Объём и стоимость лечения согласовываются до процедур.</p></details>
+          <details><summary>Обязательно ли делать снимки?<i data-lucide="plus" aria-hidden="true"></i></summary><p>Набор исследований зависит от клинической ситуации и показаний. Врач должен объяснить, зачем нужно каждое исследование.</p></details>
+          <details><summary>Форма действительно отправляет запись?<i data-lucide="plus" aria-hidden="true"></i></summary><p>Нет. Заявка сохраняется только в текущем браузере. Для рабочего сайта нужно подключить почту, Telegram или CRM клиники.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="booking" aria-labelledby="booking-title">
+      <div class="container booking-grid">
+        <div class="booking-copy" id="contacts"><p class="section-kicker">Запись на приём</p><h2 id="booking-title">Выберите услугу<br>и удобный день</h2><p>Заполните форму — сайт проверит данные и сохранит демо-заявку в этом браузере. Администратор её не получит.</p><div class="contact-lines"><span><i data-lucide="map-pin" aria-hidden="true"></i>Екатеринбург · адрес для будущей клиники</span><span><i data-lucide="clock-3" aria-hidden="true"></i>График и телефон добавляются после подтверждения</span></div><div class="booking-note"><i data-lucide="info" aria-hidden="true"></i><span>Для настоящей записи здесь подключается канал связи клиники.</span></div></div>
+        <div class="booking-form-wrap">
+          <form id="booking-form" novalidate>
+            <div class="form-row"><label class="field"><span>Ваше имя</span><input type="text" id="booking-name" autocomplete="name" maxlength="60" placeholder="Как к вам обращаться" required></label><label class="field"><span>Телефон</span><input type="tel" id="booking-phone" autocomplete="tel" maxlength="24" placeholder="+7 900 000-00-00" required></label></div>
+            <label class="field"><span>Что вас интересует</span><select id="booking-service" required><option value="">Выберите услугу</option><option>Профессиональная гигиена</option><option>Лечение зубов</option><option>Имплантация</option><option>Детский приём</option><option>Ортодонтия</option><option>Эстетическая стоматология</option><option>Пока не знаю — нужна консультация</option></select></label>
+            <div class="form-row"><label class="field"><span>Желаемая дата</span><input type="date" id="booking-date" required></label><label class="field"><span>Удобное время</span><select id="booking-time"><option>Утро</option><option>День</option><option>Вечер</option><option>Любое</option></select></label></div>
+            <label class="field"><span>Комментарий <small>необязательно</small></span><textarea id="booking-comment" rows="3" maxlength="400" placeholder="Например, что беспокоит"></textarea></label>
+            <label class="consent"><input type="checkbox" id="booking-consent"><span>Согласен сохранить демо-заявку локально в этом браузере. Данные наружу не отправляются.</span></label>
+            <p class="form-error" id="booking-error" role="alert" hidden></p>
+            <button class="button button-primary button-wide" type="submit">Сохранить демо-заявку <i data-lucide="calendar-check" aria-hidden="true"></i></button>
+          </form>
+          <div class="booking-success" id="booking-success" hidden><span class="success-icon"><i data-lucide="check" aria-hidden="true"></i></span><h3>Демо-заявка сохранена</h3><p>Запись есть только в этом браузере. Можно скопировать её текст или изменить данные.</p><textarea id="booking-result" rows="7" readonly aria-label="Текст сохранённой демо-заявки"></textarea><div class="success-actions"><button class="button button-dark" id="copy-booking" type="button"><i data-lucide="copy" aria-hidden="true"></i> Скопировать текст</button><button class="text-link" id="edit-booking" type="button">Изменить данные</button></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i data-lucide="plus"></i></span><span><strong>ЛИНИЯ</strong><small>стоматология · демо</small></span></a><div class="footer-contact"><strong>Лечение с понятным бюджетом</strong><span>Три сценария · рассрочка · запись на консультацию</span></div><a class="button button-light" href="#booking">Записаться <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div><div class="container footer-bottom"><p>Демонстрационный проект для портфолио. Клиника, цены и условия вымышлены. Не является медицинской консультацией или предложением действующей клиники.</p><a href="https://www.pexels.com/" target="_blank" rel="noopener">Стоковые фотографии: Pexels <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></footer>
+
+  <dialog class="discount-dialog" id="discount-dialog" aria-labelledby="discount-title" aria-describedby="discount-description">
+    <div class="discount-dialog-grid"><div class="discount-dialog-copy"><p class="section-kicker">Для первого визита</p><h2 id="discount-title">Скидка 10 %<br>на первичный приём</h2><p id="discount-description">Запишитесь на консультацию — в демо-заявке отметим участие в акции. Врач проведёт осмотр и обсудит с вами план лечения.</p><button class="button button-primary" id="discount-book" type="button">Записаться со скидкой <i data-lucide="arrow-right" aria-hidden="true"></i></button><small>Демонстрационная акция. Срок, перечень услуг и ограничения для рабочего сайта подтверждает клиника.</small></div><div class="discount-dialog-photo"><img src="./assets/hero-smile-CXEg1_9A.jpg" alt="Улыбающаяся пациентка на приёме у стоматолога" width="1600" height="1067" loading="lazy"><span>−10 %</span></div></div>
+    <button class="discount-close icon-button" id="discount-close" type="button" aria-label="Закрыть окно со скидкой"><i data-lucide="x" aria-hidden="true"></i></button>
+  </dialog>
+
+  <a class="mobile-booking button button-primary" href="#booking">Записаться <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+  <div class="toast" id="toast" role="status" aria-live="polite" popover="manual" hidden>Текст скопирован</div>
+</body>
+</html>
